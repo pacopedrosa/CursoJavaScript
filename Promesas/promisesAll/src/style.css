@@ -1,0 +1,36 @@
+#app{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.character-card{ 
+width: 200px;
+border: 1px solid #ddd;
+border-radius: 8px;
+overflow: hidden;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+transition: transform 0.3s;
+background-color: beige;
+margin: 16px;
+}
+
+.character-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card-content{
+    padding: 16px;
+    text-align: center;
+}
+
+.card-content h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}

@@ -1,0 +1,67 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "PruebaProducto5",
+      "stock": 80,
+      "imagen": "https//via.placeholder.com/150",
+      "categoria": 1
+    },
+    {
+      "id": "2",
+      "nombre": "Producto2",
+      "stock": 15,
+      "imagen": "https://via.placeholder.com/150",
+      "categoria": 1
+    },
+    {
+      "id": "3",
+      "nombre": "Producto3",
+      "stock": 30,
+      "imagen": "https://via.placeholder.com/150",
+      "categoria": 3
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "Electrónica"
+    },
+    {
+      "id": "2",
+      "nombre": "Muebles"
+    },
+    {
+      "id": "3",
+      "nombre": "Ropa"
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "1",
+      "productoId": 1,
+      "usuario": "Juan",
+      "comentario": "Este producto es excelente",
+      "valoracion": 5
+    },
+    {
+      "id": "2",
+      "productoId": 2,
+      "usuario": "Ana",
+      "comentario": "El producto es bueno pero tiene un precio alto",
+      "valoracion": 4
+    }
+  ],
+  "historialPrecios": [
+    {
+      "id": "8403",
+      "productId": 1,
+      "precios": [
+        23,
+        36,
+        21.75,
+        19.99
+      ]
+    }
+  ]
+}

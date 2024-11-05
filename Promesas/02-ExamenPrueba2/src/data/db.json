@@ -1,0 +1,219 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "Camiseta",
+      "precio": 19.99,
+      "stock": {
+        "cantidad": 50,
+        "ubicacion": "Almacén A"
+      },
+      "categoria": {
+        "nombre": "Ropa",
+        "subcategorias": [
+          "Casual",
+          "Deportiva"
+        ]
+      },
+      "detalles": {
+        "material": "Algodón",
+        "tallas disponibles": [
+          "XS",
+          "S",
+          "M",
+          "L",
+          "XL"
+        ],
+        "colores": [
+          "Rojo",
+          "Azul",
+          "Verde"
+        ]
+      }
+    },
+    {
+      "id": "2",
+      "nombre": "Zapatillas",
+      "precio": 49.99,
+      "stock": {
+        "cantidad": 30,
+        "ubicacion": "Almacén B"
+      },
+      "categoria": {
+        "nombre": "Calzado",
+        "subcategorias": [
+          "Deportivas",
+          "Casuales"
+        ]
+      },
+      "detalles": {
+        "material": "Sintético",
+        "tallas disponibles": [
+          "38",
+          "39",
+          "40",
+          "41"
+        ],
+        "colores": [
+          "Negro",
+          "Blanco",
+          "Gris"
+        ]
+      }
+    },
+    {
+      "id": "3",
+      "nombre": "Mochila",
+      "precio": 29.99,
+      "stock": {
+        "cantidad": 20,
+        "ubicacion": "Almacén A"
+      },
+      "categoria": {
+        "nombre": "Accesorios",
+        "subcategorias": [
+          "Escolar",
+          "De viaje"
+        ]
+      },
+      "detalles": {
+        "material": "Poliéster",
+        "dimensiones": {
+          "alto": "40cm",
+          "ancho": "30cm",
+          "profundidad": "15cm"
+        },
+        "colores": [
+          "Azul",
+          "Negro",
+          "Rojo"
+        ]
+      }
+    },
+    {
+      "id": "4",
+      "nombre": "Auriculares",
+      "precio": 79.99,
+      "stock": {
+        "cantidad": 15,
+        "ubicacion": "Almacén C"
+      },
+      "categoria": {
+        "nombre": "Electrónica",
+        "subcategorias": [
+          "Inalámbricos",
+          "Con cable"
+        ]
+      },
+      "detalles": {
+        "tipo": "Inalámbricos",
+        "compatibilidad": [
+          "Android",
+          "iOS"
+        ],
+        "características": {
+          "cancelación de ruido": true,
+          "duración batería": "20 horas"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "nombre": "Libro",
+      "precio": 14.99,
+      "stock": {
+        "cantidad": 100,
+        "ubicacion": "Almacén D"
+      },
+      "categoria": {
+        "nombre": "Literatura",
+        "subcategorias": [
+          "Ficción",
+          "No Ficción"
+        ]
+      },
+      "detalles": {
+        "autor": "Gabriel García Márquez",
+        "editorial": "Random House",
+        "páginas": 400
+      }
+    }
+  ],
+  "ventas": [
+    {
+      "id": "1",
+      "producto_id": 1,
+      "cantidad": 2,
+      "fecha": "2024-10-01",
+      "cliente": {
+        "nombre": "Juan Pérez",
+        "email": "juan@example.com",
+        "direccion": {
+          "calle": "Av. Libertador",
+          "numero": "1234",
+          "ciudad": "Buenos Aires"
+        }
+      }
+    },
+    {
+      "id": "2",
+      "producto_id": 2,
+      "cantidad": 1,
+      "fecha": "2024-10-02",
+      "cliente": {
+        "nombre": "María López",
+        "email": "maria@example.com",
+        "direccion": {
+          "calle": "Calle Falsa",
+          "numero": "5678",
+          "ciudad": "Madrid"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "producto_id": 3,
+      "cantidad": 3,
+      "fecha": "2024-10-03",
+      "cliente": {
+        "nombre": "Pedro Gómez",
+        "email": "pedro@example.com",
+        "direccion": {
+          "calle": "Calle Real",
+          "numero": "910",
+          "ciudad": "Barcelona"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "producto_id": 4,
+      "cantidad": 1,
+      "fecha": "2024-10-04",
+      "cliente": {
+        "nombre": "Ana Torres",
+        "email": "ana@example.com",
+        "direccion": {
+          "calle": "Calle Mayor",
+          "numero": "111",
+          "ciudad": "Valencia"
+        }
+      }
+    },
+    {
+      "id": "5",
+      "producto_id": 5,
+      "cantidad": 2,
+      "fecha": "2024-10-05",
+      "cliente": {
+        "nombre": "Luis Martínez",
+        "email": "luis@example.com",
+        "direccion": {
+          "calle": "Calle Nueva",
+          "numero": "222",
+          "ciudad": "Sevilla"
+        }
+      }
+    }
+  ]
+}
