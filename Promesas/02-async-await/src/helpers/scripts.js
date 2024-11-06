@@ -206,3 +206,54 @@ export function obtenerPersonajesPromesa() {
   }
 
 
+  export const fetchMultipleResourceWithAll = async () => {
+    const temporizador = Date.now();
+    try{
+
+      const [users, posts, comments] = await Promise.all([
+        fetch('https://jsonplaceholder.typicode.com/users').then(response => response.json),
+        fetch('https://jsonplaceholder.typicode.com/posts').then(response => response.json),
+        fetch('https://jsonplaceholder.typicode.com/comments').then(response => response.json),
+      ])
+
+      const resources = new Map();
+        resources.set('users', users);
+        resources.set('posts', posts);
+        resources.set('comments', comments);
+
+        const endTime = Date.now();
+        console.log(`Tiempo: ${endTime-temporizador}ms`);
+        return resources;
+    }catch(err){
+      console.error('Error:', err);
+    }
+  }
+
+  export const fetchMultipleResourcesWithAllSettled = async () => {
+    const startTime = Date.now(); // Inicio del temporizador
+
+    const results = await Promise.allSettled([
+        fetch('https://jsonplaceholder.typicode.com/users').then(res => res.json()),
+        fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()),
+        fetch('https://jsonplaceholder.typicode.com/comments').then(res => res.json())
+    ]);
+
+    const resourceNames = ['users', 'posts', 'comments'];
+
+    const resources = new Map(
+        results.map((result, index) => {
+            const resourceName = resourceNames[index];
+            const value = result.status === 'fulfilled' ? result.value : [];
+            if (result.status === 'rejected') {
+                console.error(`Error al obtener ${resourceName}:`, result.reason);
+            }
+            return [resourceName, value];
+        })
+    );
+
+    const endTime = Date.now();
+    console.log(`Tiempo con Promise.allSettled: ${endTime - startTime}ms`);
+
+    return resources;
+}
+

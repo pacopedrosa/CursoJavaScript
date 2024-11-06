@@ -1,0 +1,77 @@
+{
+  "productos": [
+    {
+      "id": "1",
+      "nombre": "productoactualizado",
+      "stock": "90",
+      "precio": "10",
+      "categoriaId": 1
+    },
+    {
+      "id": "2",
+      "nombre": "Producto 2",
+      "stock": 20,
+      "precio": 49.99,
+      "categoriaId": 2
+    },
+    {
+      "id": "07f4",
+      "categoriaId": 1,
+      "nombre": "productoCreado",
+      "stock": "90",
+      "precio": "10"
+    },
+    {
+      "id": "1b8b",
+      "categoriaId": 1,
+      "nombre": "productoCreado",
+      "stock": "90",
+      "precio": "10"
+    }
+  ],
+  "categorias": [
+    {
+      "id": "1",
+      "nombre": "Electrónica"
+    },
+    {
+      "id": "2",
+      "nombre": "Ropa"
+    }
+  ],
+  "comentarios": [
+    {
+      "id": "1",
+      "productoId": 1,
+      "usuario": "Juan",
+      "contenido": "Excelente producto!",
+      "calificacion": 5
+    },
+    {
+      "id": "2",
+      "productoId": 2,
+      "usuario": "Maria",
+      "contenido": "Buena calidad.",
+      "calificacion": 4
+    }
+  ],
+  "historialPrecios": [
+    {
+      "productoId": 1,
+      "precios": [
+        29.99,
+        24.99,
+        19.99
+      ],
+      "id": "6c69"
+    },
+    {
+      "productoId": 2,
+      "precios": [
+        49.99,
+        39.99
+      ],
+      "id": "300d"
+    }
+  ]
+}

@@ -1,37 +1,6 @@
 {
   "productos": [
     {
-      "id": "1",
-      "nombre": "Camiseta",
-      "precio": 19.99,
-      "stock": {
-        "cantidad": 50,
-        "ubicacion": "Almacén A"
-      },
-      "categoria": {
-        "nombre": "Ropa",
-        "subcategorias": [
-          "Casual",
-          "Deportiva"
-        ]
-      },
-      "detalles": {
-        "material": "Algodón",
-        "tallas disponibles": [
-          "XS",
-          "S",
-          "M",
-          "L",
-          "XL"
-        ],
-        "colores": [
-          "Rojo",
-          "Azul",
-          "Verde"
-        ]
-      }
-    },
-    {
       "id": "2",
       "nombre": "Zapatillas",
       "precio": 49.99,

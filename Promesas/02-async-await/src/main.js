@@ -1,3 +1,4 @@
-import { fetchDatosAsync,fetchUserDataWithAsyncAwait,fetchUserDataWithPromises,fetchPostWithError,fetchPostWithErrorAsync } from "./helpers/scripts.js";
+import { fetchDatosAsync,fetchUserDataWithAsyncAwait,fetchUserDataWithPromises,fetchPostWithError,
+fetchPostWithErrorAsync,fetchMultipleResourceWithAll,fetchMultipleResourcesWithAllSettled } from "./helpers/scripts.js";
 
-fetchPostWithErrorAsync();
+fetchMultipleResourcesWithAllSettled();

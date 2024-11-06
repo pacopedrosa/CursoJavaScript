@@ -115,3 +115,39 @@ export const modificarTallas = async (getProducts, url) => {
 }
 
 //Hacer un buscar y un borrar
+
+export const searchProduct = async (getProducts, url, productoBuscar) => {
+  try {
+    const dataProducts = await getProducts(url);
+    const productoEncontrado = dataProducts.find((producto) => producto.nombre === productoBuscar);
+    if(productoEncontrado){
+      console.log("Producto encontrado:", productoEncontrado);
+    }else{
+      console.log("Producto no encontrado");
+    }
+  } catch (error) {
+    console.log("Error al buscar", error);
+  }
+}
+
+export const deleteProduct = async (getProducts, urlBase, productoId) => {
+  try {
+    const response = await fetch(`${urlBase}productos/${productoId}`, { // Concatenación correcta de URL
+      method: 'DELETE',
+    });
+    
+    if (!response.ok) {
+      throw new Error(`Error al borrar el producto: ${response.status}`);
+    }
+    
+    console.log("Producto borrado correctamente");
+    
+    // Llama a `getProducts` después de borrar el producto para actualizar la lista
+    return await getProducts(`${urlBase}productos`);
+  } catch (err) {
+    console.log("Error al borrar", err);
+    return null;
+  }
+};
+
+
