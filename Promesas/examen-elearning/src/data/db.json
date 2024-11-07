@@ -220,6 +220,84 @@
         "Basics",
         "Extenso"
       ]
+    },
+    {
+      "id": "f45b",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "a03f",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "2634",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "7fc7",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "3eeb",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "4e45",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
     }
   ],
   "students": [

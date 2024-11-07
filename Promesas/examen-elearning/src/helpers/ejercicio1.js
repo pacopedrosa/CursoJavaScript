@@ -230,3 +230,43 @@ export const getCompletedCourses = async (studentId, url) => {
 
 
 
+
+
+/*
+Ejercicio de prueba de comparar y pedir fechas a una api realizado por la IA por si cae en el examen
+
+
+const apiUrl = 'http://localhost:5000/fechas';  // URL para obtener las fechas
+
+// Función para obtener las fechas desde la API
+const getFechas = async () => {
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) throw new Error('Error al obtener las fechas');
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error:', error.message);
+  }
+};
+
+// Función para comparar dos fechas
+const compararFechas = async () => {
+  try {
+    const fechas = await getFechas();
+    const fecha1 = new Date(fechas[0].fecha);
+    const fecha2 = new Date(fechas[1].fecha);
+
+    if (fecha1 > fecha2) {
+      console.log('La primera fecha es mayor que la segunda');
+    } else if (fecha1 < fecha2) {
+      console.log('La primera fecha es menor que la segunda');
+    } else {
+      console.log('Las fechas son iguales');
+    }
+  } catch (error) {
+    console.error('Error al comparar fechas:', error.message);
+  }
+};
+
+*/ 
