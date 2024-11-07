@@ -1,0 +1,325 @@
+{
+  "courses": [
+    {
+      "id": "1",
+      "title": "JavaScript Avanzado",
+      "instructor": "Ana Martínez",
+      "level": "avanzado",
+      "duration": 30,
+      "rating": 4.8,
+      "tags": [
+        "programación",
+        "javascript",
+        "es6",
+        "Express"
+      ],
+      "lessons": [
+        {
+          "id": 1,
+          "title": "Promesas y Async/Await",
+          "order": 1
+        },
+        {
+          "id": 2,
+          "title": "Patrones de Diseño en JavaScript",
+          "order": 2
+        },
+        {
+          "id": 3,
+          "title": "Optimización y Rendimiento",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "React desde Cero",
+      "instructor": "Carlos Ruiz",
+      "level": "intermedio",
+      "duration": 25,
+      "rating": 4.6,
+      "tags": [
+        "programación",
+        "react",
+        "frontend",
+        "Express"
+      ],
+      "lessons": [
+        {
+          "id": 4,
+          "title": "Fundamentos de React",
+          "order": 1
+        },
+        {
+          "id": 5,
+          "title": "Hooks y Estado",
+          "order": 2
+        },
+        {
+          "id": 6,
+          "title": "Gestión de Estado Avanzada",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Introducción a TypeScript",
+      "instructor": "Laura Gómez",
+      "level": "básico",
+      "duration": 20,
+      "rating": 4.7,
+      "tags": [
+        "programación",
+        "typescript",
+        "javascript",
+        "Express"
+      ],
+      "lessons": [
+        {
+          "id": 7,
+          "title": "Tipos y Anotaciones",
+          "order": 1
+        },
+        {
+          "id": 8,
+          "title": "Interfaces y Clases",
+          "order": 2
+        },
+        {
+          "id": 9,
+          "title": "Funciones y Genéricos",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "title": "Backend con Node.js",
+      "instructor": "Pedro Pérez",
+      "level": "avanzado",
+      "duration": 40,
+      "rating": 4.9,
+      "tags": [
+        "programación",
+        "node.js",
+        "backend",
+        "Extenso"
+      ],
+      "lessons": [
+        {
+          "id": 10,
+          "title": "Creación de APIs REST",
+          "order": 1
+        },
+        {
+          "id": 11,
+          "title": "Autenticación y Autorización",
+          "order": 2
+        },
+        {
+          "id": 12,
+          "title": "Despliegue en Producción",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "title": "Introducción a Python",
+      "instructor": "Sofía Fernández",
+      "level": "básico",
+      "duration": 15,
+      "rating": 4.5,
+      "tags": [
+        "programación",
+        "python",
+        "iniciación",
+        "Express"
+      ],
+      "lessons": [
+        {
+          "id": 13,
+          "title": "Sintaxis Básica y Variables",
+          "order": 1
+        },
+        {
+          "id": 14,
+          "title": "Control de Flujo",
+          "order": 2
+        },
+        {
+          "id": 15,
+          "title": "Funciones y Estructuras de Datos",
+          "order": 3
+        }
+      ]
+    },
+    {
+      "id": "959f",
+      "title": "prueba",
+      "instructor": "prueba",
+      "level": "avanzado",
+      "duration": 15,
+      "rating": 7,
+      "tags": [
+        "programacion",
+        "prueba",
+        "prueba",
+        "Express"
+      ]
+    },
+    {
+      "id": "2975",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "12aa",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "4b62",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    },
+    {
+      "id": "b4db",
+      "title": "Intro to Programming",
+      "instructor": "John Doe",
+      "level": "Beginner",
+      "duration": 45,
+      "rating": 4.5,
+      "tags": [
+        "Programming",
+        "Basics",
+        "Extenso"
+      ]
+    }
+  ],
+  "students": [
+    {
+      "id": "1",
+      "name": "Laura García",
+      "email": "laura@ejemplo.com",
+      "enrolledCourses": [
+        1,
+        2
+      ],
+      "progress": [
+        {
+          "courseId": 2,
+          "completedLessons": [
+            4
+          ],
+          "lastAccess": "2024-03-11T10:15:00Z"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Miguel Ángel Rodríguez",
+      "email": "miguel@ejemplo.com",
+      "enrolledCourses": [
+        1
+      ],
+      "progress": [
+        {
+          "courseId": 1,
+          "completedLessons": [
+            1
+          ],
+          "lastAccess": "2024-03-09T16:45:00Z"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Isabel Sánchez",
+      "email": "isabel@ejemplo.com",
+      "enrolledCourses": [
+        2
+      ],
+      "progress": [
+        {
+          "courseId": 2,
+          "completedLessons": [
+            4,
+            5,
+            6
+          ],
+          "lastAccess": "2024-03-10T09:20:00Z"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Carlos López",
+      "email": "carlos@ejemplo.com",
+      "enrolledCourses": [
+        3
+      ],
+      "progress": [
+        {
+          "courseId": 3,
+          "completedLessons": [
+            7,
+            8
+          ],
+          "lastAccess": "2024-03-12T14:00:00Z"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Ana Torres",
+      "email": "ana@ejemplo.com",
+      "enrolledCourses": [
+        1,
+        4
+      ],
+      "progress": [
+        {
+          "courseId": 1,
+          "completedLessons": [
+            1,
+            2
+          ],
+          "lastAccess": "2024-03-13T11:30:00Z"
+        },
+        {
+          "courseId": 4,
+          "completedLessons": [
+            10
+          ],
+          "lastAccess": "2024-03-14T09:45:00Z"
+        }
+      ]
+    }
+  ]
+}

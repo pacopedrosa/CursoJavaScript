@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script type="module" src="src/main.js" defer></script>
+    <title>Examen DWEC E-Learning</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+        color: #333;
+        line-height: 1.6;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #0056b3;
+        text-align: center;
+      }
+      h1 {
+        font-size: 2em;
+        margin: 20px 0;
+      }
+      h2 {
+        font-size: 1.5em;
+        margin: 20px 0;
+      }
+      h3 {
+        font-size: 1.2em;
+        margin: 10px 0;
+      }
+      h1,
+      h2,
+      h3,
+      p,
+      ul,
+      ol {
+        text-align: left; /* Alinea todo el contenido a la izquierda */
+        margin: 0 10px;
+      }
+      .center-image {
+        text-align: center;
+      }
+      img {
+        border-radius: 8px;
+        margin-top: 10px;
+      }
+      p,
+      ul,
+      ol {
+        margin: 10px 20px;
+      }
+      ul,
+      ol {
+        list-style-type: disc;
+        margin-left: 40px;
+      }
+      code {
+        background-color: #eee;
+        padding: 2px 4px;
+        border-radius: 4px;
+      }
+      pre {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-radius: 5px;
+        overflow-x: auto;
+        white-space: pre-wrap;
+      }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9em;
+        color: #666;
+        background-color: #0056b3;
+        color: #fff;
+      }
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .footer-content span {
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Examen de JavaScript, Cursos E-Learning</h1>
+
+    <div class="center-image">
+      <img src="/selva.jpg" alt="Supervivencia en Programación" width="25%" />
+    </div>
+
+    <h2 id="setup-proyecto">
+      Ejercicio 0: Configuración del Proyecto (0.5 puntos)
+    </h2>
+    <p><strong>Requisitos de partida</strong>:</p>
+    <ul>
+      <li>Crea un proyecto utilizando <strong>Vite</strong>.</li>
+      <li>
+        Levanta una API en el puerto <strong>3500</strong> a través de un script
+        llamado <code>examen-javascript</code> utilizando el fichero
+        <code>db.json</code>.
+      </li>
+      <li>
+        Crea un fichero <strong>.env</strong> para las variables globales.
+      </li>
+    </ul>
+
+    <h2 id="gestion-cursos">
+      Ejercicio 1: Gestión de Cursos en la API (5 puntos)
+    </h2>
+
+    <h3 id="filtrar-cursos">a) Filtrar Cursos por Nivel (1 punto)</h3>
+    <p>
+      Implementa una función llamada <code>getCourses(level)</code> que reciba
+      como parámetro un <code>level</code> y devuelva un array con los cursos
+      que correspondan a ese nivel.
+    </p>
+
+    <h3 id="crear-curso">b) Crear un Nuevo Curso en la API (1 punto)</h3>
+    <p>
+      Implementa una función llamada <code>createCourse(data)</code> que reciba
+      un objeto <code>data</code> con la información de un nuevo curso y lo
+      añada a la API.
+    </p>
+    <p><strong>Requisitos</strong>:</p>
+    <ul>
+      <li>
+        La función debe recibir un objeto <code>data</code> con las propiedades
+        <code>title</code>, <code>instructor</code>, <code>level</code>,
+        <code>duration</code>, <code>rating</code>, y <code>tags</code>.
+      </li>
+      <li>
+        Debe retornar una Promesa que devuelva el curso recién creado,
+        incluyendo el <code>id</code> generado por la API.
+      </li>
+      <li>
+        Si <code>data</code> es inválido, genera un error manejado por la
+        función.
+      </li>
+    </ul>
+
+    <h3 id="actualizar-etiquetas">
+      c) Actualización de Etiquetas en Cursos (2 puntos)
+    </h3>
+    <p>
+      Crea una función <code>updateCourseLevel()</code> que recorra todos los
+      cursos en la API y, según la duración de cada uno, añada una etiqueta
+      (<code>tag</code>) en <code>tags</code>.
+    </p>
+    <p><strong>Requisitos</strong>:</p>
+    <ol>
+      <li>
+        <p>Para cada curso:</p>
+        <ul>
+          <li>
+            Si la duración es menor o igual a 30 minutos, agrega
+            <code>"Express"</code> a <code>tags</code>.
+          </li>
+          <li>
+            Si es mayor, agrega <code>"Extenso"</code> a <code>tags</code>.
+          </li>
+        </ul>
+      </li>
+      <li>
+        <p>
+          Retorna una Promesa que devuelva un array con los cursos actualizados.
+        </p>
+        <blockquote>
+          <p>
+            <em><strong>Nota</strong></em
+            >: Evita <code>forEach</code> con <code>async/await</code>. Usa
+            <code>for...of</code> para secuencial o
+            <code>Promise.all</code> para paralelo.
+          </p>
+        </blockquote>
+      </li>
+    </ol>
+
+    <h3 id="media-cursos">d) Media de los Cursos (1 punto)</h3>
+    <p>
+      Crea una función <code>getAverageRating()</code> que devuelva el
+      <code>rating</code> promedio de todos los cursos en un array usando
+      <code>reduce()</code>.
+    </p>
+
+    <h2 id="cursos-en-progreso">
+      Ejercicio 2: Cursos en Progreso (1.75 puntos)
+    </h2>
+    <p>
+      Implementa una función
+      <code>removeCourseInProgress(studentId, courseId)</code> que elimine un
+      curso en progreso de un estudiante en la API.
+    </p>
+
+    <h2 id="listado-cursos-completados">
+      Ejercicio 3: Listado de Cursos Completados por Estudiante (1.75 puntos)
+    </h2>
+    <p><strong>Instrucciones</strong>:</p>
+    <p>
+      Crea una función llamada <code>getCompletedCourses(studentId)</code> que
+      devuelva un <code>MAP</code> con todos los cursos que un estudiante ha
+      completado.
+    </p>
+
+    <h2 id="verificacion-funciones">
+      Ejercicio 4: Verificación de las Funciones (1 punto)
+    </h2>
+    <p>
+      Crea una función llamada <code>init()</code> en <code>main.js</code> que
+      realice un test o comprobación de cada ejercicio realizado, incluyendo
+      posibles casos que tu función controla.
+    </p>
+
+    <h2 id="verificacion-funciones">Nota: Cuestiones Importantes</h2>
+    <p>- Recuerda documentar todas las funciones con <strong>JSDoc</strong>.</p>
+    <p>
+      - Recuerda añadir tu <i><b>nombre </b> </i> a cada fichero .js que
+      entregues con la sintaxis de <strong>JSDoc</strong>.
+    </p>
+    <p>
+      - Recuerda gestionar toda la <strong>Asincronía </strong>** controlando
+      los posibles errores que puedan ocurrir.
+    </p>
+    <p>
+      - Recuerda que la entrega del examen se debe realizar comprimiendo toda la
+      carpeta examen-elearning sin la carpeta <strong>node_modules </strong>y
+      subiéndola a la plataforma de <strong>Moodle</strong>.
+    </p>
+    <p>
+      - Este examen cubre todos los Resultados de Aprendizaje de Javascript sin
+      incluir DOM niPOO.
+    </p>
+    <br />
+    <footer class="footer">
+      <div class="footer-content">
+        <span>&#169; Isaías Fernández</span>
+        <span>Desarrollo Web en Entorno Cliente</span>
+      </div>
+    </footer>
+  </body>
+</html>
