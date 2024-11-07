@@ -15,14 +15,7 @@
       "categoriaId": 2
     },
     {
-      "id": "07f4",
-      "categoriaId": 1,
-      "nombre": "productoCreado",
-      "stock": "90",
-      "precio": "10"
-    },
-    {
-      "id": "1b8b",
+      "id": "",
       "categoriaId": 1,
       "nombre": "productoCreado",
       "stock": "90",
@@ -37,6 +30,65 @@
     {
       "id": "2",
       "nombre": "Ropa"
+    },
+    {
+      "id": "8e5b",
+      "nombre": {
+        "id": 1,
+        "nombre": "nombre"
+      }
+    },
+    {
+      "id": "0b10",
+      "nombre": "nombre"
+    },
+    {
+      "id": "2a15",
+      "nombre": "nombre"
+    },
+    {
+      "id": "e2f2",
+      "nombre": "nombre"
+    },
+    {
+      "id": "6b9e",
+      "nombre": "nombre"
+    },
+    {
+      "id": "becc",
+      "nombre": "nombre"
+    },
+    {
+      "id": "ad83",
+      "nombre": "nombre"
+    },
+    {
+      "id": "59c6",
+      "nombre": "nombre"
+    },
+    {
+      "id": "c217",
+      "nombre": "nombre"
+    },
+    {
+      "id": "aeb5",
+      "nombre": "nombre"
+    },
+    {
+      "id": "2d76",
+      "nombre": "nombre"
+    },
+    {
+      "id": "e130",
+      "nombre": "nombre"
+    },
+    {
+      "id": "0537",
+      "nombre": "nombre"
+    },
+    {
+      "id": "1116",
+      "nombre": "nombre"
     }
   ],
   "comentarios": [
@@ -53,6 +105,209 @@
       "usuario": "Maria",
       "contenido": "Buena calidad.",
       "calificacion": 4
+    },
+    {
+      "id": "f8b3",
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": "eef6",
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
+    },
+    {
+      "id": 10,
+      "usuario": "Ana",
+      "contenido": "Me encanta este producto",
+      "calificacion": 5,
+      "productoId": 1
     }
   ],
   "historialPrecios": [

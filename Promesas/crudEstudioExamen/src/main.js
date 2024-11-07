@@ -1,16 +1,20 @@
 import { getProducts } from "./helpers/getProducts";
-import { crearProducto, obtenerProductos, actualizarProducto } from "./helpers/scripts";
+import { crearProducto, obtenerProductos, actualizarProducto,eliminarProducto,eliminarProductosAllSettled,
+    crearCategorias,obtenerCrearWithPromiseAll,obtenercategorias, añadirComentariosAProductos,filtrarProductos,obtenerHistorialPrecios } from "./helpers/scripts";
 
 const url = `${import.meta.env.VITE_URL_SERVER}`;
-const newProduct = {
-    nombre:'productoactualizado',
-    stock: '90',
-    precio: '10',
+const newCategory = {
+    id:1,
+    nombre:'nombre',
+
 }
 
-    
- actualizarProducto(url, 1, newProduct).then(()=>{
-    console.log("Producto actualizado correctamente");
- }).catch(err => {
-    console.log("Error al actualizar el producto:", err);
- })
+const comentario = {
+    id:10,
+    usuario: "Ana",
+    contenido: "Me encanta este producto",
+    calificacion: 5,
+    productoId: 1
+};
+
+obtenerHistorialPrecios(url,1);
