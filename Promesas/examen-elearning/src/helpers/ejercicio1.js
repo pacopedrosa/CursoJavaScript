@@ -86,7 +86,8 @@ export const updateCourseLevel = async (url) => {
             }
 
             // Almacenar el curso actualizado
-            updatedCourses.push(await updateResponse.json());
+            const act = await updateResponse.json()
+            updatedCourses.push(act);
         }
 
         // Retornar los cursos actualizados
@@ -229,6 +230,119 @@ export const getCompletedCourses = async (studentId, url) => {
 };
 
 
+
+export const actualizarCurso = async (url, datos, idCurso) => {
+    try {
+        const response = await fetch(`${url}courses`);
+        if (!response.ok) {
+            throw new Error("Error al obtener los cursos");
+        }
+
+        const data = await response.json();
+
+        console.log("Cursos obtenidos:", data);
+        console.log("ID de curso a actualizar:", idCurso);
+
+        // Encontrar el curso específico por ID
+        const cursoEncontrado = data.find(curso => curso.id === String(idCurso));
+        
+        if (!cursoEncontrado) {
+            throw new Error("Curso no encontrado");
+        }
+
+        // Crear un nuevo objeto con solo los datos a actualizar, manteniendo el resto intacto
+        const datosActualizados = {
+            ...cursoEncontrado, 
+            // Sobrescribir solo los campos proporcionados
+            title:  datos.title,
+            instructor: datos.instructor,
+            level: datos.level ,
+            duration: datos.duration,
+        };
+
+        const actualizacion = await fetch(`${url}courses/${cursoEncontrado.id}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(datosActualizados),
+        });
+
+        if (!actualizacion.ok) {
+            throw new Error("Error al actualizar el curso");
+        }
+
+        const res = await actualizacion.json();
+        return res;
+        
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+};
+
+
+//No funciona
+export const restaurarCourse = async (url, studentId, courseId) => {
+    try {
+        // Obtener los estudiantes desde el servidor
+        const responseEstudiantes = await fetch(`${url}students`);
+        if (!responseEstudiantes.ok) {
+            throw new Error("Error al obtener los estudiantes");
+        }
+        const estudiantes = await responseEstudiantes.json();
+
+        // Asegurarse de que el studentId sea una cadena para la comparación
+        const studentIdString = String(studentId); // Convierte studentId a cadena 
+        const courseIdString = String(courseId); // Convierte courseId a cadena
+
+        // Buscar al estudiante por studentId
+        const estudiante = estudiantes.find(s => s.id === studentIdString);
+        if (!estudiante) {
+            throw new Error("Estudiante no encontrado");
+        }
+
+        // Recuperar los datos almacenados en localStorage (backup de progreso)
+        const datosRecuperados = JSON.parse(localStorage.getItem('BackupProgress')) || [];
+
+        // Verificar si el curso está en los datos guardados de BackupProgress
+        const datosGuardados = datosRecuperados.find(element => {
+            return element.studentId === studentIdString && element.courseId === courseIdString;
+        });
+
+        if (!datosGuardados) {
+            throw new Error("No se han encontrado los datos para restaurar el curso");
+        }
+
+        // Aquí ya no modificamos directamente `estudiante.progress` dentro de la función
+
+        // Realizar la actualización del estudiante en el servidor sin modificar su progreso directamente
+        const updateResponse = await fetch(`${url}students/${studentId}`, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(estudiante),
+        });
+
+        if (!updateResponse.ok) {
+            throw new Error("Error al actualizar los cursos en progreso del estudiante");
+        }
+
+        // Eliminar el curso restaurado de BackupProgress en localStorage
+        const borrado = datosRecuperados.filter(element => {
+            return element.studentId !== studentIdString || element.courseId !== courseIdString;
+        });
+
+        // Guardar los datos actualizados en localStorage
+        localStorage.setItem('BackupProgress', JSON.stringify(borrado));
+
+        // Retornar el estudiante o algún otro valor según sea necesario
+        return estudiante; 
+
+    } catch (error) {
+        console.log("Error: " + error.message);
+    }
+};
 
 
 
