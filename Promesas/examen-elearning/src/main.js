@@ -1,5 +1,5 @@
 import { getCoursesLevel,createCourse,updateCourseLevel,getAverageRating,removeCourseInProgress
-    ,getCompletedCourses,actualizarCurso,restaurarCourse } from "./helpers/ejercicio1.js";
+    ,getCompletedCourses,actualizarCurso,restaurarCourse,borrar } from "./helpers/ejercicio1.js";
 
 const url = 'http://localhost:3500/'; // Replace with your actual API URL
 
@@ -9,10 +9,9 @@ const datos = {
     level: 'basico',
     duration: 300
 };
-
 export const init = async () => {
     try {
-        const result = await restaurarCourse(url,1,1);
+        const result = await borrar(3,2,url);
         console.log(result);
     } catch (error) {
         console.log("Error" + error.message);

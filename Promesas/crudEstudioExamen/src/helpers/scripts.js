@@ -90,7 +90,7 @@ export const eliminarProducto = async (url, productId) => {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
 
-        const result = await response.json(); // Corregimos 'reponse' a 'response'
+        const result = await response.json(); 
         return result;
 
     } catch (error) {

@@ -1,3 +1,6 @@
+
+//mostrar cursos segun el nivel
+
 export const getCoursesLevel = async (url, level) => {
     try{
         const response = await fetch(`${url}courses`)
@@ -20,6 +23,8 @@ export const getCoursesLevel = async (url, level) => {
         console.log("Error" + error.message);
     }
 }
+
+//Crear un curso, lo que ocurre es que en el fetch pones la url donde quieres que se escriba eso
 
 export const createCourse = async (data, url) => {
 
@@ -344,7 +349,35 @@ export const restaurarCourse = async (url, studentId, courseId) => {
     }
 };
 
+export const borrar = async (stundentId, courseId, url) => {
+    try {
+    const response = await fetch(`${url}students/${stundentId}`)
+    if (!response.ok) {
+        throw new Error('Error al obtener los estudiantes');
+    }
 
+    const data = await response.json();
+    const estudiante = data.progress.findIndex(element => element.courseId === courseId)
+    data.splice(estudiante, 1);
+
+    const response2 = await fetch(`${url}students/${stundentId}`,{
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({progress: data.progress}),
+    });
+
+    const data2 = await response2.json()
+    const guardados = JSON.parse(localStorage.getItem('BackupProgress'));
+    guardados.push({ studentId, courseId });
+    localStorage.setItem('BackupProgress', JSON.stringify(guardados));
+
+    return data2;
+} catch (error) {
+ console.log("Error:" + error.message);       
+}
+}
 
 /*
 Ejercicio de prueba de comparar y pedir fechas a una api realizado por la IA por si cae en el examen
